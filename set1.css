@@ -1,0 +1,40 @@
+*{
+    margin : 0px;
+    padding : 10px;
+}
+
+.order-list{
+    padding : 10px;
+}
+
+h1{
+    /* Changing the color of the heading to RED */
+    color:red;
+    font-size: 50px;
+}
+
+p{
+    color: rgb(35, 65, 122);
+    font-size: 20px;
+}
+
+#name{
+    color: brown;
+    font-size: 30px;
+}
+
+.work{
+    color: aquamarine;
+    font-size: 30px;
+}
+
+h2{
+    color: aqua;
+    font-size: 40px;
+}
+
+#first , #second{
+    color: blueviolet;
+    font-size: 25px;
+    font-weight: bolder;
+}
