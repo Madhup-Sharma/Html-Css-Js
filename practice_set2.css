@@ -1,0 +1,25 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.dibba{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.52);
+    /* width: 150px; */
+    height: 30px;
+}
+
+main{
+    height: 430px;
+    background-color: cadetblue;
+}
+
+#wallpaper{
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 352px;
+    background-image: url("https://images2.alphacoders.com/134/thumb-350-1341970.png");
+}
+
