@@ -1,0 +1,65 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+background: linear-gradient(to right, lightblue, lightgreen);
+}
+
+.container {
+    height: 15px;
+    width: 50%;
+    background-color: azure;
+    position: relative;
+    left: 25%;
+    top: 150px;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: lightcoral;
+    /* width: 10%; */
+    border-radius: 20px;
+    animation: progress 5s 1s ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes progress {
+    0% {
+        background-color: rgb(208, 72, 72);
+        width: 0%;
+    }
+    50% {
+        background-color: rgb(228, 228, 90);
+        width: 70%;
+    }
+    90% {
+        background-color: rgb(33, 183, 133);
+        width: 90%;
+    }
+    97% {
+        background-color: rgb(13, 166, 69);
+        width: 75%;
+    }
+    99% {
+        background-color: rgb(13, 166, 69);
+        width: 95%;
+    }
+    100% {
+        background-color: lightgreen;
+        width: 100%;
+    }
+}
+
+
+h1 {
+    font-size: 30px;
+    font-weight: 900;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    position: relative;
+    top: 140px;
+}

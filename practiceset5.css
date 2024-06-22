@@ -1,0 +1,60 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* NAVBAR CSS */
+
+nav {
+    padding: 5px;
+}
+nav a{
+    text-decoration: none;
+    margin-left: 60px;
+    padding: 5px;
+}
+
+/* HEADER CSS */
+
+header{
+    background-color: palegreen;
+    height: 30px;
+}
+
+/* CSS FOR DIV */
+
+#second {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: green;
+}
+
+/* BOX CSS */
+
+.box{
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    background-color: cyan;
+}
+
+.container{
+    border: 3px solid;
+    margin: 5px;
+}
+#box4{
+    right: 0px;
+    position: fixed;
+}
+
+#box2{
+    z-index: 2;
+    position: absolute;
+    left: 40px
+}
+
+footer{
+    position: fixed;
+    bottom: 30px;
+}

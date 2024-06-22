@@ -1,0 +1,27 @@
+.container1{
+    height: 200px;
+    width: 200px;
+    background-color: crimson;
+   
+}
+
+.container2{
+    height: 400px;
+    width: 400px;
+    background-color: cyan;
+    border-width: 5px;
+    border-color: rgb(121, 198, 121);
+    border-style: solid;
+
+}
+button{
+    height: 70px;
+    width: 70px;
+    padding: 10px 15px 10px 15px;
+    margin: 100px;
+    border-color: red;
+    border-style: dotted;
+    border-radius: 35px;
+    border-width: 2px;
+
+}
