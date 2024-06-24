@@ -1,0 +1,16 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    color: whitesmoke;
+    background: linear-gradient(to right, rgb(87, 208, 248), rgb(168, 64, 233));
+}
+
+h1{
+    position: relative;
+    top: 40vh;
+}
