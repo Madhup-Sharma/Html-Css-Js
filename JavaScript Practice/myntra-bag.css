@@ -1,0 +1,40 @@
+
+body{
+    background: linear-gradient(to right, rgb(108, 181, 206), rgb(180, 136, 237));
+}
+
+.container{
+    text-align: center;
+    position: relative;
+    top: 40vh;
+    
+}
+
+.add{
+    padding: 5px 15px;
+    background-color: lightgreen;
+    border-style: none;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.wish{
+    padding: 5px 35px;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 10px;
+    text-transform: uppercase;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.add:hover {
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    background-color: rgb(93, 235, 93);
+  }
+
+  .wish:hover{
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    background-color: #f70a8d;
+    color: white;
+  }

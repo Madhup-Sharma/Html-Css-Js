@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myntra Bag Exercise</title>
+    <link rel="stylesheet" href="myntra-bag.css">
+</head>
+<body>
+    
+    <div class="container">
+
+        <button class="add" onclick="cartQnty += 1 
+            document.querySelector('#cart-summary').innerText = `Your bag has ${cartQnty} items...`;
+    ">Add to Bag</button>
+    <button class="wish" onclick="
+                if(cartQnty > 0){
+                    cartQnty -= 1
+                }
+            document.querySelector('#cart-summary').innerText = `Your bag has ${cartQnty} items...`;
+    ">Move to Wishlist 🥰 </button>
+    <button class="add" onclick="cartQnty += 2 
+            document.querySelector('#cart-summary').innerText = `Your bag has ${cartQnty} items...`;
+    ">Add 1 + 1 sale item</button>
+    <h2 id="cart-summary"></h2>
+    </div>
+
+    <script>
+        let cartQnty = 0;
+        document.querySelector('#cart-summary').innerText = `Your bag has ${cartQnty} items...`;
+
+
+
+    </script>
+</body>
+</html>
