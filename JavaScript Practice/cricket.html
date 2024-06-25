@@ -48,23 +48,23 @@
         onclick=
         "
         // This will generate a random number between 0 and 3
-        let random1 = Math.random() * 3;
-        let compChoice1;
-        if(random1 > 0 && random1 <= 1){
-            compChoice1 = 'Bat';
-        }else if(random1 > 1 && random1 <= 2){
-            compChoice1 = 'Ball';
+        let random = Math.random() * 3;
+        let compChoice;
+        if(random > 0 && random <= 1){
+            compChoice = 'Bat';
+        }else if(random > 1 && random <= 2){
+            compChoice = 'Ball';
         }else{
-            compChoice1 = 'Wicket';
+            compChoice = 'Wicket';
         }
 
         // Declaring the results 
 
-        if(compChoice1 === 'Wicket'){
+        if(compChoice === 'Wicket'){
             let bck = 'linear-gradient(to right, #23e1f3, #35e968)';
             document.querySelector('#result').innerText = 'Congratulations you have won 🎉';
             document.querySelector('body').style.background = bck;
-        }else if(compChoice1 === 'Ball'){
+        }else if(compChoice === 'Ball'){
             let bck = 'linear-gradient(to right, #f0841f, #e3f729)';
             document.querySelector('#result').innerText = 'Game Tie 😑';
             document.querySelector('body').style.background = bck;
@@ -86,23 +86,23 @@
         onclick=
         "
         // This will generate a random number between 0 and 3
-        let random2 = Math.random() * 3;
-        let compChoice2;
-        if(random2 > 0 && random2 <= 1){
-            compChoice2 = 'Bat';
-        }else if(random2 > 1 && random2 <= 2){
-            compChoice2 = 'Ball';
+       let random = Math.random() * 3;
+       let compChoice;
+        if(random > 0 && random <= 1){
+            compChoice = 'Bat';
+        }else if(random > 1 && random <= 2){
+            compChoice = 'Ball';
         }else{
-            compChoice2 = 'Wicket';
+            compChoice = 'Wicket';
         }
 
         // Declaring the results 
 
-        if(compChoice2 === 'Bat'){
+        if(compChoice === 'Bat'){
             let bck = 'linear-gradient(to right, #23e1f3, #35e968)';
             document.querySelector('#result').innerText = 'Congratulations you have won 🎉';
             document.querySelector('body').style.background = bck;
-        }else if(compChoice2 === 'Wicket'){
+        }else if(compChoice === 'Wicket'){
             let bck = 'linear-gradient(to right, #f0841f, #e3f729)';
             document.querySelector('#result').innerText = 'Game Tie 😑';
             document.querySelector('body').style.background = bck;
