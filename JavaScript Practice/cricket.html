@@ -1,28 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cricket Game</title>
-    <link rel="stylesheet" href="cricket.css">
-</head>
-<body>
+    <link rel="stylesheet" href="cricket.css" />
+  </head>
+  <body>
     <h1>Cricket Game 😁😀</h1>
     <h2>Pick one 😉</h2>
     <p>
-        <button class="btn" 
-        onclick=
-        "
+      <button
+        class="btn"
+        onclick="
         // This will generate a random number between 0 and 3
-        let random = Math.random() * 3;
-        let compChoice;
-        if(random > 0 && random <= 1){
-            compChoice = 'Bat';
-        }else if(random > 1 && random <= 2){
-            compChoice = 'Ball';
-        }else{
-            compChoice = 'Wicket';
-        }
+        getRandom();
 
         // Declaring the results 
 
@@ -30,33 +22,31 @@
             let bck = 'linear-gradient(to right, #23e1f3, #35e968)';
             document.querySelector('#result').innerText = 'Congratulations you have won 🎉';
             document.querySelector('body').style.background = bck;
+            score.win++;
+            document.querySelector('#stats').innerText = `Win: ${score.win} | Tie: ${score.tie} | Lost: ${score.lost}`;
         }else if(compChoice === 'Bat'){
             let bck = 'linear-gradient(to right, #f0841f, #e3f729)';
             document.querySelector('#result').innerText = 'Game Tie 😑';
             document.querySelector('body').style.background = bck;
+            score.tie++;
+            document.querySelector('#stats').innerText = `Win: ${score.win} | Tie: ${score.tie} | Lost: ${score.lost}`;
         }else{
             let bck = 'linear-gradient(to right, #f35ade, #cd2d43)';
             document.querySelector('#result').innerText = 'Computer Won 🤖';
             document.querySelector('body').style.background = bck;
+            score.lost++
+            document.querySelector('#stats').innerText = `Win: ${score.win} | Tie: ${score.tie} | Lost: ${score.lost}`;
         }
         //
         "
-        >
-            Bat  
-        </button>
-        <button class="btn"
-        onclick=
-        "
+      >
+        Bat
+      </button>
+      <button
+        class="btn"
+        onclick="
         // This will generate a random number between 0 and 3
-        let random = Math.random() * 3;
-        let compChoice;
-        if(random > 0 && random <= 1){
-            compChoice = 'Bat';
-        }else if(random > 1 && random <= 2){
-            compChoice = 'Ball';
-        }else{
-            compChoice = 'Wicket';
-        }
+        getRandom();
 
         // Declaring the results 
 
@@ -64,37 +54,31 @@
             let bck = 'linear-gradient(to right, #23e1f3, #35e968)';
             document.querySelector('#result').innerText = 'Congratulations you have won 🎉';
             document.querySelector('body').style.background = bck;
+            score.win++;
+            document.querySelector('#stats').innerText = `Win: ${score.win} | Tie: ${score.tie} | Lost: ${score.lost}`;
         }else if(compChoice === 'Ball'){
             let bck = 'linear-gradient(to right, #f0841f, #e3f729)';
             document.querySelector('#result').innerText = 'Game Tie 😑';
             document.querySelector('body').style.background = bck;
+            score.tie++;
+            document.querySelector('#stats').innerText = `Win: ${score.win} | Tie: ${score.tie} | Lost: ${score.lost}`;
         }else{
             let bck = 'linear-gradient(to right, #f35ade, #cd2d43)';
             document.querySelector('#result').innerText = 'Computer Won 🤖';
             document.querySelector('body').style.background = bck;
+            score.lost++;
+            document.querySelector('#stats').innerText = `Win: ${score.win} | Tie: ${score.tie} | Lost: ${score.lost}`;
         }
         //
         "
-        
-        
-        
-        
-        >
-            Ball  
-        </button>
-        <button class="btn"
-        onclick=
-        "
+      >
+        Ball
+      </button>
+      <button
+        class="btn"
+        onclick="
         // This will generate a random number between 0 and 3
-       let random = Math.random() * 3;
-       let compChoice;
-        if(random > 0 && random <= 1){
-            compChoice = 'Bat';
-        }else if(random > 1 && random <= 2){
-            compChoice = 'Ball';
-        }else{
-            compChoice = 'Wicket';
-        }
+        getRandom();
 
         // Declaring the results 
 
@@ -102,40 +86,73 @@
             let bck = 'linear-gradient(to right, #23e1f3, #35e968)';
             document.querySelector('#result').innerText = 'Congratulations you have won 🎉';
             document.querySelector('body').style.background = bck;
+            score.win++;
+            document.querySelector('#stats').innerText = `Win: ${score.win} | Tie: ${score.tie} | Lost: ${score.lost}`;
         }else if(compChoice === 'Wicket'){
             let bck = 'linear-gradient(to right, #f0841f, #e3f729)';
             document.querySelector('#result').innerText = 'Game Tie 😑';
             document.querySelector('body').style.background = bck;
+            score.tie++;
+            document.querySelector('#stats').innerText = `Win: ${score.win} | Tie: ${score.tie} | Lost: ${score.lost}`;
         }else{
             let bck = 'linear-gradient(to right, #f35ade, #cd2d43)';
             document.querySelector('#result').innerText = 'Computer Won 🤖';
             document.querySelector('body').style.background = bck;
+            score.lost++;
+            document.querySelector('#stats').innerText = `Win: ${score.win} | Tie: ${score.tie} | Lost: ${score.lost}`;
         }
         //
         "
-
-        
-        
-        >
-            Wicket 
-        </button>
-
+      >
+        Wicket
+      </button>
     </p>
 
     <p id="result">Your result will be displayed here</p>
+    <p id="stats"> Stats 📈 </p>
 
-   <p>
-
-       <button class="restart"
-       onclick="
+    <p>
+      <button
+        class="restart"
+        onclick="
        let bck = 'linear-gradient(to right, #869596, #596164)';
        document.querySelector('body').style.background = bck;
        document.querySelector('#result').innerText = 'Your result will be displayed here';
+       score.win = 0;
+       score.tie = 0;
+       score.lost = 0;
+       document.querySelector('#stats').innerText = `Win: ${score.win} | Tie: ${score.tie} | Lost: ${score.lost}`;
        "
-       
-       
-       
-       >Restart</button>
-   </p>
-</body>
+      >
+        Restart
+      </button>
+    </p>
+
+    <script>
+      let compChoice;
+      function getRandom() {
+        let random = Math.random() * 3;
+        if (random > 0 && random <= 1) {
+          compChoice = "Bat";
+        } else if (random > 1 && random <= 2) {
+          compChoice = "Ball";
+        } else {
+          compChoice = "Wicket";
+        }
+      }
+
+
+
+
+      // Saving the results 
+
+      let score = {
+        win: 0,
+        lost: 0,
+        tie: 0,
+      };
+
+      console.log(score);
+    </script>
+  </body>
 </html>

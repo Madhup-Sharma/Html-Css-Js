@@ -91,3 +91,12 @@ p{
     color: white;
     transition-timing-function: ease-in-out;
 }
+
+#stats{
+    position: relative;
+    top: 29vh;
+    text-shadow: 3px 4px 21px rgba(0, 0, 0, 1);
+    font-size: 40px;
+    font-weight: 500;
+    
+}
