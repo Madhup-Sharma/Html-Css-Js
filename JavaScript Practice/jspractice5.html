@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JS Practice 5 | JSON, Local Storage, Date and DOM</title>
+  </head>
+  <body>
+    This is a JavaScript Practice FIle. Please open the Console to see the
+    logged values...
+
+    <h4>Here is a Button...</h4>
+    <button onclick="count++"></button>
+    <p>Count value: ${count}</p>
+    <script>
+      let currentHour = new Date().getHours();
+      let name = "Taru";
+      console.log(typeof currentHour);
+
+      if (currentHour >= 0 && currentHour <= 12) {
+        console.log(`Good Morning ${name} 🌅`);
+      } else if (currentHour > 12 && currentHour <= 16) {
+        console.log(`Good AfterNoon ${name} 🕑`);
+      } else if (currentHour > 16 && currentHour <= 20) {
+        console.log(`Good Evening ${name} 🌇`);
+      } else {
+        console.log(`Good Night ${name} 🌆`);
+      }
+
+
+      let count = 0;
+
+    </script>
+  </body>
+</html>
