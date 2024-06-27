@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice Set 4 | Object Notation in JS</title>
+  </head>
+  <body>
+    <h1>JavaScript Objects</h1>
+
+    <script>
+      let product = {
+        size: "s",
+        name: "Jeans",
+        fit: "Slim Fit",
+        "delivery-time": "Same day delivery",
+      };
+
+      console.log(product);
+
+      let cpyprod = product;
+      console.log(cpyprod);
+
+      cpyprod.size = "M";
+      console.log(product);
+      console.log(cpyprod);
+
+      console.log(
+        `The delivery special bonus is as : ${product["delivery-time"]}`
+      );
+
+      // Destructing the object
+
+      let obj = {
+        message: "Good Job",
+        status: "Complete",
+      };
+
+      console.log(obj);
+      let { message, status } = obj;
+      console.log(message);
+      console.log(status);
+
+      function isIdenticalProduct(product1, product2) {
+        if (product1 == product2) {
+          return true;
+        }
+
+        if (typeof product1 !== "object" || typeof product2 !== "object") {
+          console.warn("Parameters passed were not objects...");
+          return false;
+        }
+
+        if (
+          product1.name === product2.name &&
+          product1.fit === product2.fit &&
+          product1.size === product2.size &&
+          product1["delivery-time"] === product2["delivery-time"]
+        ) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      let product2 = {
+        size: "M",
+        name: "Jeans",
+        fit: "Slim Fit",
+        "delivery-time": "Same day delivery",
+      };
+
+      console.log(isIdenticalProduct(product, product2));
+    </script>
+  </body>
+</html>
