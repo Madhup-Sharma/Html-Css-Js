@@ -1,0 +1,18 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#main-heading{
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    top: 10vh;
+    font-size: 55px;
+}
+body{
+    background: linear-gradient(to right, rgb(61, 197, 161), rgb(211, 215, 76));
+    font-family: "Josefin Sans", sans-serif;
+    
+}
+
