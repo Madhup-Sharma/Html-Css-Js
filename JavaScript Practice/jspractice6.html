@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Practice 6 | Arrays and Loops</title>
+  </head>
+  <body>
+    <p>THIS IS A PRACTICE CODE.... FOR JS PRACTICE SET 6</p>
+
+    <script>
+      // Creating the array
+
+      let myarr = [5, 6, 8, 9, 2, 1];
+      // Putting at the start\
+      myarr.unshift(4);
+      // Putting at the back
+      myarr.push(7);
+
+      console.log(myarr);
+
+      function getValue(arr, idx) {
+        return arr[idx];
+      }
+
+      let ans = getValue(myarr, 2);
+
+      console.log(`The value returned is ${ans}`);
+
+      // Creating a new array using the slice method
+
+      let arr = myarr.slice(0, myarr.length);
+
+      // A note to be added the slice method is like arr.slice(start index , end_index - 1); // Originally it does not consider the last index value it just copies the arr till the second last of the index that has been provided.
+
+      console.log(arr);
+
+      function printFirstFivePrimes() {
+        let count = 0;
+        let num = 2;
+
+        while (count < 5) {
+          if (isPrime(num)) {
+            console.log(num);
+            count++;
+          }
+          num++;
+        }
+      }
+
+      function isPrime(n) {
+        if (n <= 1) return false; // 
+        if (n <= 3) return true; 
+
+        if (n % 2 === 0 || n % 3 === 0) return false;
+
+        for (let i = 5; i * i <= n; i += 6) {
+          if (n % i === 0 || n % (i + 2) === 0) return false;
+        }
+
+        return true;
+      }
+
+      printFirstFivePrimes();
+
+
+      // Printing from 1 to 10 in reverse order 
+      function print10To1(){
+
+          for(let i = 10; i > 0; i--){
+              console.log(i);
+            }
+        }
+    
+        print10To1();
+
+
+        let sample = [1, -6, 5, 7, -98];
+
+        function printPositive(arr){
+            for(let i = 0; i < arr.length; i++){
+                if(arr[i] < 0){
+                    continue;
+                }
+
+                console.log(arr[i]);
+            }
+        }
+
+        printPositive(sample);
+
+
+        let sample2 = ['I', 'am', 'learning', 'JavaScript'];
+
+        function merge(arr){
+            let ans = '';
+            for(let i = 0; i < sample2.length; i++){
+                ans += arr[i];
+                ans+=' ';
+            }
+
+            return ans;
+        }
+
+        let finalString = merge(sample2);
+
+        console.log(finalString);
+
+
+    </script>
+  </body>
+</html>
