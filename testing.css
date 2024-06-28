@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000;
+    background: linear-gradient(to right, #1f2121, #010809);
+    margin: 0;
+}
+
+.song-card {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.thumbnail {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+}
+
+.song-info {
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #164d56;
+    background: linear-gradient(to right, #164d56, #051f23);
+}
+
+.song-name {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: "Playwrite NG Modern", cursive;
+}
+
+.play-button {
+    position: absolute;
+    top: 70%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-color: #000000c3;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.play-button:hover {
+    background-color: #102339;
+}
+
+.play-button.playing {
+    transform: translate(-50%, -50%) scale(1.2); /* Slightly larger when playing */
+}
