@@ -2,17 +2,36 @@
 <html lang="en">
   <head>
     <title>JS Practice 5 | JSON, Local Storage, Date and DOM</title>
+    <style>
+        button {
+          height: 50px;
+          width: 50px;
+          font-size: 25px;
+          border-style: none;
+          border-radius: 10px;
+        }
+
+        .js-odd{
+          background-color: chocolate;
+        }
+
+        .js-even{
+          background-color: lawngreen;
+        }
+
+    </style>
   </head>
   <body>
     This is a JavaScript Practice FIle. Please open the Console to see the
     logged values...
 
     <h4>Here is a Button...</h4>
-    <button onclick="count++"></button>
-    <p>Count value: ${count}</p>
+    <button onclick=" buttonPressed();
+    "></button>
+
     <script>
       let currentHour = new Date().getHours();
-      let name = "Taru";
+      let name = "Mg";
       console.log(typeof currentHour);
 
       if (currentHour >= 0 && currentHour <= 12) {
@@ -26,7 +45,27 @@
       }
 
 
-      let count = 0;
+      let count = localStorage.getItem('count') || 0;
+
+      function buttonPressed(){
+        count++
+        localStorage.setItem('count', count);
+        updateButton();
+      }
+
+      function updateButton(){
+        let btn = document.querySelector('button');
+        if(count % 2 === 0){
+          btn.classList.remove('js-odd');
+          btn.classList.add('js-even');
+        }else{
+          btn.classList.remove('js-even');
+          btn.classList.add('js-odd');
+        }
+        btn.innerText = `${count}`;
+      }
+      // Add the updating at the time of loading itself
+      updateButton();
 
     </script>
   </body>
