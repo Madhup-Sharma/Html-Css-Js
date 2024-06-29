@@ -4,13 +4,16 @@ let multiply = function(num1, num2){
 
 console.log(multiply(3,4));
 
-// let runTwice = function(task){
-//     task();
-//     task();
-// }
+let runTwice = task =>{
+    task();
+    task();
+}
 
-// console.log(runTwice(multiply(3,4))); 
+let print = () => {
+    console.log("Hello World...");
+}
 
+runTwice(print);
 let growClass = i =>{
     return `
         height: ${30 * i}px;
@@ -26,12 +29,9 @@ let grow = () => {
     button.style.cssText = growClass(count++);
 };
 
-
 button.addEventListener('click', () => {
     setTimeout(grow, 2000);
 });
-
-
 
 // using the for each loop for summation ---> Accumulator Pattern
 
@@ -41,7 +41,6 @@ numbers.forEach((num) => {
 
     sum+=num;
 });
-
 
 // using the map function  for squaring
 let squares = num => num * num;
