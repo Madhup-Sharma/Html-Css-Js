@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advance Functions</title>
+  </head>
+  <body>
+    <h1>Advance Functions🩷</h1>
+
+    <button id="btn">Click Me</button>
+    <script>
+      let add = function (num1, num2) {
+        return num1 + num2;
+      };
+      console.log(add(3, 4));
+
+      // we can share the same reference of the function to a new function like this
+      let newAdd = add;
+      console.log(newAdd(3, 5));
+
+      // Sum of three numbers
+
+      let sumThreeNumbers = function (num1, num2, num3, sum) {
+        let res = add(num1, num2);
+        return num3 + res;
+      };
+
+      console.log(sumThreeNumbers(1, 2, 3, add));
+      console.log(sumThreeNumbers);
+      console.log(typeof sumThreeNumbers);
+
+      // Arrow functions
+
+      let multi = (num1, num2) => {
+        return num1 * num2;
+      };
+
+      //One-Liner Arrow Function
+      let square = (num) => num * num;
+      // Logging the value returned by the Arrow function
+      console.log(multi(2, 3));
+      console.log(square(5));
+
+      // SetTimeout functions
+
+      let timerId = setTimeout(() => {
+        console.log("Wake up Buddy!");
+      }, 5000);
+
+      console.log(`Alarm Set with TimerId : ${timerId}`);
+      clearTimeout(timerId);
+
+      // setInterval function
+
+      // let timerId2 = setInterval( () => {
+      //     console.log("Wake up Buddy!");
+      //     }, 1000);
+
+      // clearInterval(timerId2);
+
+      let button = document.querySelector("#btn");
+
+      button.addEventListener("click", (event) =>
+        console.log("I am clicked...")
+      );
+
+      let printDate = event => console.log(new Date());
+
+      button.addEventListener('click', printDate);
+      button.removeEventListener('click', printDate);
+
+
+      let humanBehavior = ['happy', 'sad', 'nervous', 'angry', 'misery'];
+
+      humanBehavior.forEach(mood => console.log(mood));
+
+      
+    </script>
+  </body>
+</html>
